@@ -1,0 +1,34 @@
+.mediano {
+    width: 300px;
+    background: #fff !important;
+    border-radius: 10% !important;
+}
+
+.centrado{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.images,
+.image{
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.images img{
+    width: 190px;
+}
+
+.image img{
+    width: 215px;
+    height: 180px;
+}
+
+.images .teclado{
+    width: 300px !important;
+}
+
+.espaciado{
+    margin-right: 30px !important;
+}

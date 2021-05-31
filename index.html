@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>E/S - Cano</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!-- estilos insertados por mi -->
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Presentacion -->	
+				<section >
+					<h2> <span class="fragment highlight-red">Entrada/Salida de datos</span> </h2>
+					<div class="centrado">
+						<div class="espaciado">		
+							<h5>Nombre: Sergio Cano</h5>
+							<h5>Materia: Sistemas Operativos</h5>
+							<h5>Responsable: Dra. Carmen Carlota </h5>
+						</div>
+						<img src="img/escu.png" class="mediano">
+					</div>
+				</section>
+				<!-- Introduccion -->
+				<section>
+					<section>
+						<h2>Introducción</h2>
+						<div class="centrado">						
+							<div class="espaciado">		
+								<p>Una computadora tiene la capacidad de 
+									<span class="fragment highlight-red">recibir</span>  y 
+									<span class="fragment highlight-green">transmitir</span> 
+									información desde o
+									"hacia el exterior". Se puede ver la entrada/salida 
+									(E/S) como un conjunto de controladores de E/S; 
+									cada controlador se conecta al bus del sistema o 
+									a un conmutador centralizado y supervisa a uno o 
+									más dispositivos periféricos.</p>
+							</div>
+						</div>
+					</section>
+					<section>		
+						<p>Un controlador de
+							E/S no es simplemente una conexión fisica entre un
+							dispositivo externo y el bus del sistema, sino que
+							contiene cierta "inteligencia". Es decir, dispone 
+							de la lógica necesaria para realizar una función de 
+							comunicación entre los periféricos del computador y el bus</p>
+					</section>
+					<section>
+						<h3>Dispositivos de entrada</h3>
+						<div class="images">
+							<img class="teclado" src="img/keyboard_PNG5865.png">
+							<img src="img/game.png">
+							<img src="img/mouse.png">
+							<img src="img/micro.png">
+						</div>
+					</section>
+					<section>
+						<h3>Dispositivos de salida</h3>
+						<div class="image">
+							<img src="img/monitor.png">
+							<img src="img/bocinas.png">
+							<img src="img/audifono.png">
+						</div>
+					</section>
+				</section>
+				<!-- Interrupciones -->
+				<section>
+					<section>
+						<h4>E/S dirigidas por interrupciones</h4>
+						<p>
+						•El mecanismo de interrupción hace posible que el módulo
+						provoque la detención temporal de la actividad que realiza 
+						el procesador para prestarle servicio a los sucesos de
+						 E/S cuando ocurran. Este mecanismo es asistido por el 
+						 hardware para sincronizar el procesador con los sucesos 
+						 de E/S (asíncronicos).
+						</p> 
+					</section>
+					<section>
+						Luego de dar servicio a un dispositivo ejecutando su 
+						rutina de servicio de interrupción 
+						 asociada , el procesador reanuda la actividad previa desde 
+						 el punto de la interrupción.
+						 <br><br>
+						• Este  forma  de  administrar  la  E/S  resulta  ventajosa
+						respecto de la programada, porque evita el ciclo de espera
+						activa.</section>
+				</section>
+				<!-- clases de Interrupciones -->
+				<section>
+					<section>
+						<h2>Clases de interrupciones</h2>
+						<p>	
+							• De  programa:  las  genera  alguna  condición  que  ocurre
+							como resultado de una ejecución,  sobreflujo, división sobre
+							cero o llamada ilegal.
+							<br><br>
+							• De temporizador: por un timer dentro del procesador a
+							intervalos regulares.
+						</p>
+					</section>
+					<section>
+						<p>
+							•De E/S generadas por un controlador de E/S para indicar la
+							terminación   normal   de   una   operación   o   diferentes condiciones de error.
+							<br><br>
+							•De falla de hardware: debidas a fallas, como en la paridad
+							de memoria.
+						</p>
+					</section>
+				</section>
+				<!-- Programada -->
+				<section>
+					<h2>E/S programada</h2>
+					<section><p>
+						La transferencia de datos bajo E/S programada es 
+						entre la CPU y un periférico transfiere datos 
+						hacia adentro y hacia fuera de la unidad de memoria 
+						por medio del canal de memoria, DMA solicita ciclos ...
+						
+					</p></section>
+					<section>
+						<p>de memoria concede la solicitud, el DMA transfiere 
+							los datos directamente a la memoria. La CPU solo 
+							retrasa su operación de acceso de memoria para transferencia
+							directa.</p>
+					</section>
+				</section>
+				<!-- DMA -->
+				<section>
+					<h3>Acceso directo a memoria</h3>
+					<p>
+						Se utiliza DMA para dispositivos de E/S de 
+						alta velocidad. E1 controlador del dispositivo 
+						transfiere un bloque de datos desde o para sus
+							buffers de almacenamiento a memoria directamente 
+							sin intervención del CPU. Solo se produce una 
+							interrupción por bloque en lugar de tener una 
+							interrupción por cada byte (o palabra).
+					</p>					
+				</section>
+				<!-- Ejemplo -->
+				<section>
+					<img src="img/123.png">
+				</section>
+				<!-- Referencias -->
+				<section>
+					<h2> <span class="fragment highlight-red">Referencias</span> </h2>
+					<div class="centrado">
+						<div class="espaciado">		
+							<h5>Aranda A. Joaquin. (Madrid). Sistemas Operativos Teoria y problemas, Editorial Sanz y Torres, S.L, S.A de C.V.
+							</h5>							
+						</div>
+						<img src="img/Imagen1.png" class="median">
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				transition: 'convex',	
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
